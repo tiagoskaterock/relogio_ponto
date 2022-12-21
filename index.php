@@ -9,14 +9,16 @@ require_once(dirname(__FILE__) . "/src/models/User.php");
 
 Database::getConnection();
 
-$sql = "SELECT * FROM users";
+// $sql = "SELECT * FROM users";
 
-$result = Database::getResultFromQuery($sql);
+// $result = Database::getResultFromQuery($sql);
 
-while($row = $result->fetch_assoc()) {
-	print_r($row);
-	echo "<hr>";
-}
+// while($row = $result->fetch_assoc()) {
+// 	print_r($row);
+// 	echo "<hr>";
+// }
 
 $user = new User(['name' => 'James', 'email' => 'james@cod.br']);
-print_r($user);
+$user->email = 'novo@email.com';
+print_r($user->email);
+
