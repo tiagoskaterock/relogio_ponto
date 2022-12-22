@@ -20,5 +20,11 @@ Database::getConnection();
 
 $user = new User(['name' => 'James', 'email' => 'james@cod.br']);
 $user->email = 'novo@email.com';
-print_r($user->email);
+// print_r($user->email);
+
+echo $user->getSelect(['id' => 1], 'name, email');
+
+echo '<br>';
+
+echo User::getSelect(['name' => 'Chaves']);
 
