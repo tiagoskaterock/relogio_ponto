@@ -18,13 +18,23 @@ Database::getConnection();
 // 	echo "<hr>";
 // }
 
-$user = new User(['name' => 'James', 'email' => 'james@cod.br']);
-$user->email = 'novo@email.com';
+// $user = new User(['name' => 'James', 'email' => 'james@cod.br']);
+// $user->email = 'novo@email.com';
 // print_r($user->email);
 
-echo $user->getSelect(['id' => 1], 'name, email');
+print_r(User::get(['id' => 2], 'name, email'));
 
-echo '<br>';
+print_r(User::get([], 'name'));
 
-echo User::getSelect(['name' => 'Chaves']);
+// echo '<br>';
+
+// echo User::getSelect(['name' => 'Chaves']);
+
+foreach (User::get() as $user) {
+	echo "<pre>";
+	print_r($user);
+	echo "</pre>";
+}
+
+
 
