@@ -12,3 +12,5 @@
 - Inserir informações do banco de dados *username, database, password e hostname* em **src/config/env.ini**
 - Iniciar o servidor apache
 - Abrir o projeto em **localhost/relogio_ponto**
+
+![Login Screen](assets/img/screens/login.png)
